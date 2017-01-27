@@ -39,22 +39,24 @@ public class RegistrationActivity extends AppCompatActivity {
         registerBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(passwordRegET.getText().toString().trim() != passwordReg2ET.getText().toString().trim()){
-                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(RegistrationActivity.this);
+                password = passwordRegET.getText().toString().trim();
+                password2 = passwordReg2ET.getText().toString().trim();
+//                if(password!=password2){
+//                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(RegistrationActivity.this);
+//
+//                    alertDialog.setTitle("Alert!");
+//                    alertDialog.setMessage("Please verify the Passwords"+password+password2);
+//                    alertDialog.setNegativeButton("OK", new DialogInterface.OnClickListener() {
+//                        @Override
+//                        public void onClick(DialogInterface dialog, int which) {
+//                            dialog.cancel();
+//                        }
+//                    });
+//
+//                    alertDialog.show();
+//                }
 
-                    alertDialog.setTitle("Alert!");
-                    alertDialog.setMessage("Please verify the Passwords");
-                    alertDialog.setNegativeButton("OK", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.cancel();
-                        }
-                    });
-
-                    alertDialog.show();
-                }
-
-                else{
+//                else{
                     name = nameRegET.getText().toString().trim();
                     mobile = mobileRegET.getText().toString().trim();
                     email = emailRegET.getText().toString().trim();
@@ -66,6 +68,7 @@ public class RegistrationActivity extends AppCompatActivity {
                         jsonObject.put("mobile",mobile);
                         jsonObject.put("email",email);
                         jsonObject.put("pswrd",password);
+                        jsonObject.put("action","register_user");
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -74,7 +77,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     reg.execute(jsonObject.toString());
                     Log.e("JSON Values:",jsonObject.toString());
 
-                }
+                //}
             }
         });
     }
