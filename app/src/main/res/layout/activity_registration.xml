@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:hint="Name"
         android:inputType="textPersonName"
-        android:id="@+id/nameET"/>
+        android:id="@+id/nameRegET"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -65,7 +65,7 @@
         android:layout_height="wrap_content"
         android:hint="Mobile"
         android:inputType="number"
-        android:id="@+id/mobileET"/>
+        android:id="@+id/mobileRegET"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -76,7 +76,7 @@
         android:layout_height="wrap_content"
         android:hint="E-mail"
         android:inputType="textEmailAddress"
-        android:id="@+id/emailET"/>
+        android:id="@+id/emailRegET"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -87,7 +87,7 @@
         android:layout_height="wrap_content"
         android:hint="Password"
         android:inputType="textPassword"
-        android:id="@+id/passwordET"/>
+        android:id="@+id/passwordRegET"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -98,7 +98,7 @@
         android:layout_height="wrap_content"
         android:hint="Confirm Password"
         android:inputType="textPassword"
-        android:id="@+id/password2ET"/>
+        android:id="@+id/passwordReg2ET"/>
     </android.support.design.widget.TextInputLayout>
 
     <Button
