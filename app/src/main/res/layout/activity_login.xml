@@ -72,6 +72,12 @@
 
     </android.support.design.widget.TextInputLayout>
 
+    <CheckBox
+        android:text="Remember Me"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/remembermeCB" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -79,6 +85,13 @@
         android:id="@+id/loginBTN"
         />
 
+    <TextView
+        android:text="New User?"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/registerTV" />
 
 
 </LinearLayout>

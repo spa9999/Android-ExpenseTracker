@@ -1,6 +1,7 @@
 package com.expensetracker.praneethambati.expensetracker;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -39,24 +40,24 @@ public class RegistrationActivity extends AppCompatActivity {
         registerBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                password = passwordRegET.getText().toString().trim();
-                password2 = passwordReg2ET.getText().toString().trim();
-//                if(password!=password2){
-//                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(RegistrationActivity.this);
-//
-//                    alertDialog.setTitle("Alert!");
-//                    alertDialog.setMessage("Please verify the Passwords"+password+password2);
-//                    alertDialog.setNegativeButton("OK", new DialogInterface.OnClickListener() {
-//                        @Override
-//                        public void onClick(DialogInterface dialog, int which) {
-//                            dialog.cancel();
-//                        }
-//                    });
-//
-//                    alertDialog.show();
-//                }
+                password = passwordRegET.getText().toString();
+                password2 = passwordReg2ET.getText().toString();
+                if(!password.equals(password2)){
+                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(RegistrationActivity.this);
 
-//                else{
+                    alertDialog.setTitle("Alert!");
+                    alertDialog.setMessage("Please verify the Passwords"+password+password2);
+                    alertDialog.setNegativeButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+
+                    alertDialog.show();
+                }
+
+               else {
                     name = nameRegET.getText().toString().trim();
                     mobile = mobileRegET.getText().toString().trim();
                     email = emailRegET.getText().toString().trim();
@@ -77,7 +78,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     reg.execute(jsonObject.toString());
                     Log.e("JSON Values:",jsonObject.toString());
 
-                //}
+                }
             }
         });
     }
@@ -109,8 +110,8 @@ public class RegistrationActivity extends AppCompatActivity {
                     String status = jsonObject.getString("user");
                     Toast.makeText(getApplicationContext(), "" + status, Toast.LENGTH_LONG).show();
 
-//                    Intent regintent = new Intent(Second.this, Registrion.class);
-//                    startActivity(regintent);
+                    Intent regintent = new Intent(RegistrationActivity.this, LoginActivity.class);
+                    startActivity(regintent);
 
                 } else if (respone.trim().equals("failed")) {
                     String status1 = jsonObject.getString("user");
