@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -8,25 +8,130 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-
+android:orientation="vertical"
     tools:context="com.expensetracker.praneethambati.expensetracker.MainActivity">
 
-    <Button
-        android:text="Login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/button" />
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-    <Button
-        android:text="Registeration"
-        android:layout_width="wrap_content"
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical">
+    <TextView
+        android:text="Insert Savings"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button1"
-        android:layout_below="@+id/button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/textView2"
+        android:textSize="@dimen/headingTextSize"
+        android:textAlignment="center"/>
 
-</RelativeLayout>
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <TableRow >
+        <TextView
+            android:text="Mobile:"
+            android:layout_weight="1"
+            android:textSize="18sp"/>
+        <EditText
+            android:id="@+id/mobileET"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:inputType="none"
+
+            android:editable="false" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="Savings Type:"
+            android:layout_weight="1"
+            android:textSize="18sp"/>
+        <Spinner
+            android:id="@+id/savingtypeSpnr"
+           android:layout_weight="1" ></Spinner>
+
+    </TableRow>
+
+    <TableRow >
+        <TextView
+            android:text="Reason:"
+            android:layout_weight="1"
+            android:textSize="18sp"/>
+        <EditText
+            android:id="@+id/reasonET"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:maxLines="1"
+            android:hint="Enter Reason"
+
+            />
+    </TableRow>
+
+    <TableRow >
+        <TextView
+            android:text="Amount:"
+            android:layout_weight="1"
+            android:textSize="18sp"/>
+        <EditText
+            android:id="@+id/amountET"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:inputType="number"
+            android:hint="Enter Amount"
+            />
+    </TableRow>
+
+    <TableRow >
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Date:"
+            android:layout_weight="1"
+            android:textSize="18sp"/>
+        <EditText
+            android:id="@+id/startDateET"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:hint = "Set Start Date"
+            />
+    </TableRow>
+
+    <TableRow >
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="End Date:"
+            android:layout_weight="1"
+            android:textSize="18sp"/>
+        <EditText
+            android:id="@+id/endDateET"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:hint = "Set End Date"
+            />
+    </TableRow>
+
+
+
+
+</TableLayout>
+
+
+
+
+
+     <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/isavingsBTN"/>
+ </LinearLayout>
+</ScrollView>
+</LinearLayout>
