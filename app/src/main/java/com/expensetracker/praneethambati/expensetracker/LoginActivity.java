@@ -135,11 +135,11 @@ public class LoginActivity extends AppCompatActivity {
                         store.putString(passwordKey, pwd);
                         store.putString(profileKey, status);
                         store.commit();
-                        Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
+                        Intent loginIntent = new Intent(LoginActivity.this, InsertSavingsActivity.class);
                         startActivity(loginIntent);
                     }
                     else{
-                        Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
+                        Intent loginIntent = new Intent(LoginActivity.this, LandingActivity.class);
                         loginIntent.putExtra("profile",status);
                         startActivity(loginIntent);
                     }

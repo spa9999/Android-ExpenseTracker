@@ -10,10 +10,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".LoginActivity">
-
-        </activity>
+        <activity android:name=".InsertSavingsActivity" />
+        <activity android:name=".LoginActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
@@ -21,8 +19,9 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+        <activity android:name=".LandingActivity" />
+        <activity android:name=".ShowSavingsActivity"></activity>
     </application>
 
 </manifest>

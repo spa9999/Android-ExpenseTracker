@@ -2,7 +2,6 @@ package com.expensetracker.praneethambati.expensetracker;
 
 import android.app.DatePickerDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -25,11 +24,9 @@ import org.json.JSONObject;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class InsertSavingsActivity extends AppCompatActivity implements View.OnClickListener {
     public static final String MyPREFERENCES = "MyPrefs";
     public static final String userKey = "";
     public static final String passwordKey = "";
@@ -100,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         //Spinner data from Web service
-         spinneradapter = new ArrayAdapter(MainActivity.this, android.R.layout.simple_spinner_dropdown_item, mySpinnerNames);
+         spinneradapter = new ArrayAdapter(InsertSavingsActivity.this, android.R.layout.simple_spinner_dropdown_item, mySpinnerNames);
 
 savingstypeSpnr.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
     @Override
@@ -115,7 +112,7 @@ savingstypeSpnr.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener
                 if(code.equals(d_nm)){
                     selectedSavingsType = subObj.getString("code".trim());
                    // System.out.println("The Selected Unit::::"+selectedSavingsType);
-                   // Toast.makeText(MainActivity.this,""+selectedSavingsType,Toast.LENGTH_LONG).show();
+                   // Toast.makeText(InsertSavingsActivity.this,""+selectedSavingsType,Toast.LENGTH_LONG).show();
 
                     break;
                 }
